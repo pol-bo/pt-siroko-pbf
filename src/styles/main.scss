@@ -1,0 +1,187 @@
+// Imports
+
+@import "./variables";
+@import "./typography";
+@import "./reset";
+
+// Body
+
+body {
+  display: grid;
+  grid-template: repeat(3, auto) / 1.5em auto 1.5em;
+  row-gap: 2.5em;
+  align-items: center;
+  min-height: 100vh;
+  font-family: $inconsolata;
+  color: $white;
+  background: url(/src/assets/images/background.jpg) no-repeat;
+  background-size: cover;
+}
+
+// Header
+
+.Header {
+  grid-area: 1 / 2 / 2 / 3;
+  &-content {
+    position: relative;
+    margin-top: 1em;
+  }
+  &-h1 {
+    width: 2em;
+    margin-bottom: 1em;
+  }
+  &-brand {
+    position: absolute;
+    top: 4px;
+    left: 48px;
+    display: none;
+    font-family: $siroko;
+    font-size: $cat;
+    letter-spacing: 8px;
+    transition: all 1s ease-in;
+  }
+  &-stepOne {
+    width: fit-content;
+    padding: 0.3em 0.7em;
+    font-family: $inter;
+    font-size: $bug;
+    text-transform: uppercase;
+    color: $grey-medium;
+    background-color: $grey-light;
+    border-radius: 3px;
+  }
+  &-h2 {
+    margin: 1rem 0;
+    font-family: $siroko;
+    font-size: $cat;
+    letter-spacing: 1px;
+  }
+  &-textIntro {
+    font-size: $mouse;
+    line-height: 1.35;
+  }
+}
+
+// Main
+
+.Main {
+  grid-area: 2 / 2 / 3 / 3;
+  height: fit-content;
+  padding: 1.5em;
+  border-radius: 3px;
+  background-color: $black-form;
+  &-h3 {
+    margin-bottom: 1em;
+    font-size: $fly;
+    font-family: $inter;
+    text-transform: uppercase;
+    color: $egg;
+  }
+  .Form-options {
+    position: relative;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75em;
+    background-color: $grey-dark;
+    border-radius: 0.25em;
+    overflow: hidden;
+    :hover {
+      background-color: $red-pink;
+    }
+    input {
+      appearance: none;
+      position: absolute;
+      right: 0;
+      left: 0;
+      content: "";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      margin: 0 0.75em;
+      border: 2px solid $white;
+      border-radius: 100%;
+    }
+    input::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: $white;
+      border-radius: 50%;
+      opacity: 0;
+      transition: all 300ms ease-in-out;
+    }
+    input:checked::before {
+      opacity: 1;
+    }
+
+    input:checked ~ label {
+      background-color: $red-pink;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding-left: 2.5em;
+      cursor: pointer;
+    }
+  }
+  .Button {
+    width: 100%;
+    height: 3em;
+    font-family: $inter;
+    font-size: $mouse;
+    background-color: $grey-button;
+    border-radius: 4px;
+  }
+}
+
+// Footer
+
+.Footer {
+  grid-area: 3 / 1 / 4 / 4;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  line-height: 1.25;
+  font-size: $fly;
+  color: $grey-footer;
+  background-color: $black;
+  &-a {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+// Media queries
+
+@media screen and (min-width: 48em) {
+  body {
+    grid-template-columns: 1fr 48em 1fr;
+    row-gap: 4.75em;
+  }
+  .Header {
+    &-content {
+      margin-top: 2em;
+    }
+    &-h1 {
+      margin-bottom: 2em;
+    }
+  }
+  .Header-brand {
+    display: block;
+  }
+  .Footer {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    &-container {
+      min-width: 48rem;
+      grid-column: 2 / 3;
+    }
+  }
+}
