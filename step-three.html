@@ -11,78 +11,80 @@
     <script src="/src/scripts/copydiscountcode.js" defer></script>
   </head>
   <body>
-    <header class="Header">
-      <div class="Header-content">
-        <h1 class="Header-h1">
-          <a class="Header-logo" href="/index.html">
+    <header class="header">
+      <div class="header-content">
+        <h1 class="header-h1">
+          <a class="header-logo" href="/index.html">
             <img src="/src/assets/images/skiso.png" alt="Logo de Siroko" />
           </a>
         </h1>
-        <div class="Header-brand">Siroko</div>
+        <div class="header-brand">Siroko</div>
       </div>
-      <p class="Header-stepOne">Tu premio está listo</p>
-      <h2 class="Header-h2">¡Enhorabuena!</h2>
+      <p class="header-one">Tu premio está listo</p>
+      <h2 class="header-h2">¡Enhorabuena!</h2>
     </header>
-    <main class="Main">
-      <h3 class="Main-h3">Lo prometido es deuda</h3>
-      <div class="Code-box">
-        <p id="Code-box-discount"></p>
-        <button id="Code-box-button">Copiar</button>
-      </div>
-      <p class="Code-box-p">Introduce este código en tu próxima compra para conseguir tu premio.</p>
-      <p class="Code-box-p">¡Disponible durante 20 minutos!</p>
-      <div class="Clockwork-box">
+    <main class="main">
+      <div class="main-wrapper">
+        <h3 class="main-h3">Lo prometido es deuda</h3>
+        <div class="code-box">
+          <p id="code-box-discount"></p>
+          <button id="code-box-button">Copiar</button>
+        </div>
+        <p class="code-box-p">Introduce este código en tu próxima compra para conseguir tu premio.</p>
+        <p class="code-box-p">¡Disponible durante 20 minutos!</p>
+        <div class="clockwork-box">
+          <svg
+            class="clockwork-box-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="23"
+            height="24"
+            viewBox="0 0 23 24"
+            fill="none"
+          >
+            <path
+              d="M23 4.85849L17.71 0.419495L16.2265 2.17899L21.5165 6.61799L23 4.85849ZM6.762 2.17899L5.29 0.419495L0 4.84699L1.4835 6.60649L6.762 2.17899ZM12.075 7.48049H10.35V14.3805L15.8125 17.658L16.675 16.2435L12.075 13.518V7.48049ZM11.5 2.88049C5.7845 2.88049 1.15 7.515 1.15 13.2305C1.15 18.946 5.773 23.5805 11.5 23.5805C17.2155 23.5805 21.85 18.946 21.85 13.2305C21.85 7.515 17.2155 2.88049 11.5 2.88049ZM11.5 21.2805C7.0495 21.2805 3.45 17.681 3.45 13.2305C3.45 8.77999 7.0495 5.18049 11.5 5.18049C15.9505 5.18049 19.55 8.77999 19.55 13.2305C19.55 17.681 15.9505 21.2805 11.5 21.2805Z"
+              fill="white"
+            />
+          </svg>
+          <div id="clockwork-box-countdown">
+            <span id="minutes">20</span>:<span id="seconds">00</span>
+          </div>
+          <div class="clockwork-box-timedout">
+            <p class="clockwork-box-timedout-p">
+              Código caducado.
+              <a id="refresh-button" href="#">Reiniciar.</a>
+            </p>
+          </div>
+        </div>
+        <a
+        class="siroko-button"
+        id="siroko-button"
+        href="https://www.siroko.com/es/"
+      >
+        Ir a Siroko.com
         <svg
-          class="Clockwork-box-icon"
           xmlns="http://www.w3.org/2000/svg"
-          width="23"
-          height="24"
-          viewBox="0 0 23 24"
+          width="21"
+          height="12"
+          viewBox="0 0 21 12"
           fill="none"
         >
           <path
-            d="M23 4.85849L17.71 0.419495L16.2265 2.17899L21.5165 6.61799L23 4.85849ZM6.762 2.17899L5.29 0.419495L0 4.84699L1.4835 6.60649L6.762 2.17899ZM12.075 7.48049H10.35V14.3805L15.8125 17.658L16.675 16.2435L12.075 13.518V7.48049ZM11.5 2.88049C5.7845 2.88049 1.15 7.515 1.15 13.2305C1.15 18.946 5.773 23.5805 11.5 23.5805C17.2155 23.5805 21.85 18.946 21.85 13.2305C21.85 7.515 17.2155 2.88049 11.5 2.88049ZM11.5 21.2805C7.0495 21.2805 3.45 17.681 3.45 13.2305C3.45 8.77999 7.0495 5.18049 11.5 5.18049C15.9505 5.18049 19.55 8.77999 19.55 13.2305C19.55 17.681 15.9505 21.2805 11.5 21.2805Z"
+            d="M15.75 4.6875H0V7.3125H15.75V11.25L21 6L15.75 0.75V4.6875Z"
             fill="white"
           />
         </svg>
-        <div id="Clockwork-box-countdown">
-          <span id="minutes">20</span>:<span id="seconds">00</span>
-        </div>
-        <div class="Clockwork-box-timedout">
-          <p class="Clockwork-box-timedout-p">
-            Código caducado.
-            <a id="Refresh-button" href="#">Reiniciar.</a>
-          </p>
-        </div>
+      </a>
+        </form>
       </div>
-      <a
-      class="siroko-button"
-      id="siroko-button"
-      href="https://www.siroko.com/es/"
-    >
-      Ir a Siroko.com
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="21"
-        height="12"
-        viewBox="0 0 21 12"
-        fill="none"
-      >
-        <path
-          d="M15.75 4.6875H0V7.3125H15.75V11.25L21 6L15.75 0.75V4.6875Z"
-          fill="white"
-        />
-      </svg>
-    </a>
-      </form>
     </main>
-    <footer class="Footer">
-      <div class="Footer-container">
-        <p class="Footer-p">2016-2021 Siroko Solutions S.L.</p>
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <p class="footer-p">2016-2021 Siroko Solutions S.L.</p>
         <br />
-        <p class="Footer-p">
+        <p class="footer-p">
           Todos los derechos reservados.
-          <a class="Footer-a" href="#">Ver bases</a>.
+          <a class="footer-a" href="#">Ver bases</a>.
         </p>
       </div>
     </footer>

@@ -4,9 +4,9 @@ function startChronometer(){
     let secondsText
     let minutesText
     let chronometer
-    let clockworkContent = document.getElementById('Clockwork-box-countdown')
-    let clockworkBox = document.querySelector('.Clockwork-box')
-    let clockworkBoxTimedout = document.querySelector('.Clockwork-box-timedout')
+    let clockworkContent = document.getElementById('clockwork-box-countdown')
+    let clockworkBox = document.querySelector('.clockwork-box')
+    let clockworkBoxTimedout = document.querySelector('.clockwork-box-timedout')
     let refreshBtn = document.getElementById('refresh-button')
 
     function refreshCount(){

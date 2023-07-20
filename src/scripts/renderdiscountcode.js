@@ -5,7 +5,7 @@ function renderDiscountCode(){
     let yearOption      = localStorage.getItem('optionData')
     let finalCode       = totalItems + yearOption
 
-    document.getElementById('Code-box-discount').innerText = finalCode
+    document.getElementById('code-box-discount').innerText = finalCode
 }
 
 renderDiscountCode()
